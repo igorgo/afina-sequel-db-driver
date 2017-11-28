@@ -173,8 +173,9 @@ class AfinaSequelDb {
     this.password = password
     this.scompany = scompany
     this.module = module
-    this.conectionString = host + ':' + port + database
+    this.conectionString = host + ':' + port + '/' + database
     this.pool = {}
+    console.log(this)
   }
 
   async open () {
@@ -184,7 +185,6 @@ class AfinaSequelDb {
     oci.maxRows = 10000
     oci.fetchAsString = [oci.CLOB]
     oci.autoCommit = true
-    console.log(this)
     this.pool = await oci.createPool({
       user: this.username,
       password: this.password,
