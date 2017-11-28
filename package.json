@@ -1,0 +1,15 @@
+{
+  "name": "afina-sequel-db-driver",
+  "version": "1.0.0",
+  "description": "Afina Sequel DB Driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Gorodetskyy",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "oracle12db-win64": "http://guest:guest@pmo.parus.ua/svn/oracledb-12win64/oracle12db-win64.tgz"
+  }
+}
