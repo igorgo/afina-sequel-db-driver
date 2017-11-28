@@ -184,6 +184,7 @@ class AfinaSequelDb {
     oci.maxRows = 10000
     oci.fetchAsString = [oci.CLOB]
     oci.autoCommit = true
+    console.log(this)
     this.pool = await oci.createPool({
       user: this.username,
       password: this.password,
