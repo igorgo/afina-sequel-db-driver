@@ -269,7 +269,7 @@ class AfinaSequelDb {
                              SIMPLEMENTATION => :SIMPLEMENTATION,
                              SAPPLICATION    => :SAPPLICATION,
                              SCOMPANY        => :SCOMPANY,
-                             ${!db.oldPkgSess ? 'SBROWSER        => :SBROWSER,' : ''}
+                             ${!this.oldPkgSess ? 'SBROWSER        => :SBROWSER,' : ''}
                              SLANGUAGE       => :SLANGUAGE);
      end;`
     const paramsLogin = this.createParams()
