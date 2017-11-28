@@ -11,5 +11,13 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "oracle12db-win64": "http://guest:guest@pmo.parus.ua/svn/oracledb-12win64/oracle12db-win64.tgz"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorgo/afina-sequel-db-driver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igorgo/afina-sequel-db-driver/issues"
+  },
+  "homepage": "https://github.com/igorgo/afina-sequel-db-driver#readme"
 }
