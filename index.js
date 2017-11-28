@@ -177,7 +177,7 @@ class AfinaSequelDb {
     this.pool = {}
   }
 
-  async open ({schema}) {
+  async open () {
     if (this.isOpened) return
     console.log('Opening the database…')
     oci.outFormat = oci.OBJECT
