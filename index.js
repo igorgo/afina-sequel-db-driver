@@ -166,6 +166,7 @@ class OraSqlParams {
 
 class AfinaSequelDb {
   constructor ({host, port, database, schema, oldPkgSess, username, password, scompany, module}) {
+    if (!host) throw new Error('Db host is undefined')
     this.isOpened = false
     this.schema = schema
     this.oldPkgSess = oldPkgSess
@@ -175,7 +176,6 @@ class AfinaSequelDb {
     this.module = module
     this.conectionString = host + ':' + port + '/' + database
     this.pool = {}
-    console.log(this)
   }
 
   async open () {
