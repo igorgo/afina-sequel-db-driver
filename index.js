@@ -235,7 +235,7 @@ class AfinaSequelDb {
    * if not set the new connection will be open and will be closed after execution
    * @returns {Promise.<oracledb.IExecuteReturn>} The result Object. See https://github.com/oracle/node-oracledb/blob/master/doc/api.md#-result-object-properties
    */
-  async  execute(aSessionId, aSql, aBindParams = [], aExecuteOptions = {}, aConnection = null) {
+  async execute (aSessionId, aSql, aBindParams = [], aExecuteOptions = {}, aConnection = null) {
     const lConnection = aConnection ? aConnection : (await this.getConnection(aSessionId))
     try {
       return await lConnection.execute(aSql, aBindParams, aExecuteOptions)
@@ -337,8 +337,12 @@ class AfinaSequelDb {
 
   oraErrorExtract (msg) {
     const messages = msg.split(/ORA-\d\d\d\d\d:\s/)
-    if (messages.length>1) return messages[1]
+    if (messages.length > 1) return messages[1]
     else return msg
+  }
+
+  async getPoolConnection = () => {
+    return this.pool.getConnection()
   }
 }
 
