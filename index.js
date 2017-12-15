@@ -341,7 +341,7 @@ class AfinaSequelDb {
     else return msg
   }
 
-  async getPoolConnection = () => {
+  async getPoolConnection () {
     return this.pool.getConnection()
   }
 }
